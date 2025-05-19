@@ -1,0 +1,12 @@
+helmDefaults:
+  createNamespace: true
+
+releases:
+  - name: blobscan
+    namespace: staging
+    chart: blobscan/blobscan
+    version: 0.8.2
+    values:
+      - values.yaml
+    secrets:
+      - secrets.yaml
